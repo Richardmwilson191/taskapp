@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box0;
+}
+body {
+  background: wheat;
+}
+
+.menu-area li a {
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: block;
+  padding: 0 25px;
+  font-size: 14px;
+  line-height: 30px;
+  position: relative;
+  z-index: 1;
+}
+.menu-area li {
+  list-style: none;
+  display: inline-block;
+}
+.custom-padding {
+  padding-top: 25px;
+}
+nav {
+  position: relative;
+  padding: 10px 10px 10px 10px;
+  text-align: right;
+  background: #333;
+  margin: 0 auto;
+  width: calc(100% - 60px);
+}
+.logo {
+  width: 15%;
+  float: left;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 25px;
+  text-align: left;
+  padding-left: 2%;
+}
+.menu-area li a:hover {
+  background: teal;
+  color: #fff;
+}
+nav:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 100%;
+  border-top: 10px solid #333;
+  border-right: 10px solid #333;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+nav:after {
+  position: absolute;
+  content: "";
+  border-top: 10px solid #333;
+  border-right: 10px solid #333;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  right: 0;
+}
+.clss {
+  margin-top: 0;
+  border: none;
+  opacity: 3;
+  box-shadow: 5px 10px 18px grey;
+  border-radius: 25px;
+  padding: 10px 20px;
+  height: 100px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: local;
+  background-position: center;
+  color: teal;
+  margin: 15%;
+  text-align: center;
+  font-family: "Algerian";
+}
+
+.box {
+  margin-top: 0;
+  border: none;
+  opacity: 3;
+  box-shadow: 5px 10px 18px grey;
+  border-radius: 25px;
+  padding: 10px 20px;
+  height: 600px;
+  width: 300px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: local;
+  background-position: center;
+  color: white;
+}
+
+form {
+  font-size: 15px;
+}
+
+h1 {
+  margin-top: 40px;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Algerian";
+  padding: 10px;
+  color: black;
+}
+
+.textbox {
+  padding: 10px 10px;
+  border: none;
+  border-bottom-style: solid;
+  border-bottom-color: blue;
+  border-bottom-width: thin;
+  background-color: inherit;
+  outline: none;
+}
+
+i {
+  padding: 5px;
+  background: inherit;
+  color: black;
+  min-width: 50px;
+  text-align: center;
+}
+
+input[type="submit"] {
+  margin-top: 45px;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 20px;
+  color: white;
+  background-color: blue;
+}
+
+button {
+  margin-top: 45px;
+  width: 50px;
+  height: 20px;
+  border-radius: 10px;
+  font-size: 10px;
+  color: white;
+  background-color: blue;
+}
+
+/* Sign up form css */
+
+/* h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 40px;
+} */
+
+.Up {
+  background-color: white;
+  margin-top: 75px;
+  margin-left: 0;
+  font-size: 20px;
+  border: none;
+  opacity: 3;
+  box-shadow: 1px 10px 18px grey;
+  border-radius: 25px;
+  padding: 10px 20px;
+  height: 650px;
+  width: 450px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"] {
+  height: 25px;
+  font-size: 15px;
+  /* width: fit-content; */
+}
+
+/* input[type="submit"] {
+  background-color: #6495ed;
+  width: fit-content;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+} */
