@@ -1,5 +1,5 @@
 <?php
-include('top.php');
+// include('top.php');
 include('auth.php');
 // Initialize the session
  

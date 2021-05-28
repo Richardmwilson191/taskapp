@@ -22,7 +22,7 @@ class DBCon
         if (!$this->mysqli) {
             die('Could not connect: ' . $this->mysqli->connect_error());
         } else {
-            echo "connected successfully<br>";
+            echo '<script>alert("Connected successfully")</script>';
         }
 
         return $this->mysqli;

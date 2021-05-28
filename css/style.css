@@ -1,3 +1,7 @@
+@import "dashboard.css";
+@import "create_dash.css";
+@import "show.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +11,16 @@
 }
 body {
   background: wheat;
+}
+
+.success {
+  background-color: #339900;
+  text-align: center;
+}
+
+.caution {
+  background-color: #ff9966;
+  text-align: center;
 }
 
 .menu-area li a {
@@ -69,24 +83,6 @@ nav:after {
   top: 100%;
   right: 0;
 }
-.clss {
-  margin-top: 0;
-  border: none;
-  opacity: 3;
-  box-shadow: 5px 10px 18px grey;
-  border-radius: 25px;
-  padding: 10px 20px;
-  height: 100px;
-  width: 300px;
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-attachment: local;
-  background-position: center;
-  color: teal;
-  margin: 15%;
-  text-align: center;
-  font-family: "Algerian";
-}
 
 .box {
   margin-top: 0;
@@ -137,13 +133,25 @@ i {
 }
 
 input[type="submit"] {
-  margin-top: 45px;
-  width: 200px;
+  margin: 45px 10px 0 5px;
+  width: 120px;
   height: 50px;
   border-radius: 50px;
   font-size: 20px;
   color: white;
   background-color: blue;
+  cursor: pointer;
+}
+
+.cancel {
+  margin: 45px 10px 0 5px;
+  width: 120px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 20px;
+  color: white;
+  background-color: red;
+  cursor: pointer;
 }
 
 button {
@@ -186,14 +194,3 @@ input[type="date"] {
   font-size: 15px;
   /* width: fit-content; */
 }
-
-/* input[type="submit"] {
-  background-color: #6495ed;
-  width: fit-content;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-} */

@@ -1,0 +1,26 @@
+.list-container {
+  width: fit-content;
+  padding: 4rem 0;
+
+  background-color: white;
+  text-align: center;
+  margin: 2rem auto;
+  box-shadow: 5px 5px 9px grey;
+}
+
+.list-container h2 {
+  margin-bottom: 2rem;
+}
+
+.item-list {
+}
+
+.item-list {
+  list-style: none;
+  padding: 0.5rem 4rem;
+  font-size: 16px;
+  background-color: #e7e7e7;
+  width: 100%;
+  border: 2px solid white;
+  box-shadow: 2px 3px 6px grey;
+}
