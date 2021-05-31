@@ -1,5 +1,6 @@
 <?php
 require_once('../database/connect.php');
+require_once('notifications.php');
 
 function get_projects_by_dashboard($id)
 {

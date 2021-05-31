@@ -14,7 +14,7 @@ include('../modules/get_dashboards.php'); ?>
         while ($row = mysqli_fetch_assoc($result)) : ?>
             <tr>
                 <td>
-                    <a href="projects_by_dashboard.php?id= <?= $row['db_id'] ?>">
+                    <a href="projects_by_dashboard.php?id=<?= $row['db_id'] ?>">
                         <?= $row['db_id'] ?>
                     </a>
                 </td>

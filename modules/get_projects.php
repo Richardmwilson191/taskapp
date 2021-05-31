@@ -1,5 +1,6 @@
 <?php
 require_once('../database/connect.php');
+require_once('notifications.php');
 function getProject()
 {
     $mysqli = new DBCon('localhost', 'root', '', 'taskapp');
