@@ -15,9 +15,27 @@
 .item-list {
   list-style: none;
   padding: 0.5rem 4rem;
-  font-size: 16px;
   background-color: #e7e7e7;
+  font-size: 16px;
   width: 100%;
-  border: 2px solid white;
+  /* border: 2px solid black; */
   box-shadow: 2px 3px 6px grey;
+}
+
+tr,
+th {
+  padding: 0.5rem 4rem;
+  border-collapse: collapse;
+  background-color: white;
+  border: 1px solid wheat;
+}
+
+td {
+  border: 1px solid wheat;
+  border-collapse: collapse;
+}
+
+.list-container a {
+  text-decoration: none;
+  color: blue;
 }

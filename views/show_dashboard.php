@@ -4,14 +4,25 @@ include('../modules/get_dashboards.php'); ?>
 
 <div class="list-container">
     <h2>Dashboards</h2>
-    <?php $result = getDashboard();
-    while ($row = mysqli_fetch_assoc($result)) : ?>
-        <ul class="item-list">
-            <li>Dashboard ID: <?= $row['db_id'] ?></li>
-            <li>Project Name: <?= $row['db_name'] ?></li>
-            <li>Created By: <?= $row['created_by'] ?></li>
-        </ul>
-    <?php endwhile; ?>
+    <table class="item-list">
+        <tr>
+            <th>Dashboard ID</th>
+            <th>Dashboard Name</th>
+            <th>Created By</th>
+        </tr>
+        <?php $result = getDashboard();
+        while ($row = mysqli_fetch_assoc($result)) : ?>
+            <tr>
+                <td>
+                    <a href="projects_by_dashboard.php?id= <?= $row['db_id'] ?>">
+                        <?= $row['db_id'] ?>
+                    </a>
+                </td>
+                <td><?= $row['db_name'] ?></td>
+                <td><?= $row['created_by'] ?></td>
+            </tr>
+        <?php endwhile; ?>
+    </table>
 </div>
 
 <?php include('base.php') ?>

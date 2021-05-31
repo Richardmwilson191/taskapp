@@ -1,6 +1,6 @@
-<?php
-include('top.php');
-include('../modules/get_projects.php'); ?>
+<?php include('top.php');
+include('../modules/get_projects_by_dashboard.php');
+?>
 
 <div class="list-container">
     <h2>Projects</h2>
@@ -14,7 +14,9 @@ include('../modules/get_projects.php'); ?>
             <th>End date</th>
             <th>Created By</th>
         </tr>
-        <?php $result = getProject();
+        <?php
+        $id = $_GET['id'];
+        $result = get_projects_by_dashboard($id);
         while ($row = mysqli_fetch_assoc($result)) : ?>
             <tr>
                 <td>
@@ -30,6 +32,7 @@ include('../modules/get_projects.php'); ?>
                 <td><?= $row['created_by'] ?></td>
             </tr>
         <?php endwhile; ?>
+    </table>
 </div>
 
-<?php include('base.php') ?>
+<?php include('base.php'); ?>
