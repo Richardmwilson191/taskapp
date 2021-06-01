@@ -15,6 +15,7 @@ auth_check();
 <html lang="en">
 
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>Task App</title>
 </head>
@@ -23,7 +24,7 @@ auth_check();
     <header>
         <div class="custom-padding">
             <nav>
-                <div class="logo">Logo</div>
+                <div class="logo">RJ<span>SS</span></div>
                 <ul class="menu-area">
                     <li><a href="home.php">Home</a></li>
                     <?php if (!isset($_SESSION['username'])) { ?>
@@ -36,7 +37,7 @@ auth_check();
                     <?php } ?>
                 </ul>
             </nav>
-            <h2 style="margin-top: 30px; text-align: center; ">
+            <h2 style="margin-top: 30px; text-align: center; color:antiquewhite ">
                 <?php
                 if (isset($_SESSION['username'])) {
                     echo "Welcome, " . $_SESSION['username'];
