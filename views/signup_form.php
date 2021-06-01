@@ -5,13 +5,13 @@
   <center>
     <h1>Sign Up</h1>
     <br />
-    <label for="name">First Name: </label>
+    <label for="name">Full Name: </label>
     <input
       class="textbox"
       type="text"
       name="name"
       id="name"
-      placeholder="Enter your name"
+      placeholder="Enter your full name"
       required
     />
     <br /><br /><br />

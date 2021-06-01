@@ -2,10 +2,11 @@
   width: 200px;
   height: 50px;
   border-radius: 5px;
-  font-size: 20px;
-  background-color: rgba(0, 48, 143, 0.7);
+  font-size: 18px;
+  background-color: rgba(0, 48, 143, 0.3);
   box-shadow: 5px 5px 9px grey;
   cursor: pointer;
+  font-family: 'Alfa Slab One', cursive;
 }
 
 .btndash {
@@ -14,9 +15,10 @@
   border-radius: 5px;
   font-size: 20px;
   padding: 10px;
-  background-color: rgba(0, 48, 143, 0.7);
+  background-color: rgba(0, 48, 143, 0.3);
   box-shadow: 5px 5px 9px grey;
   cursor: pointer;
+  font-family: 'Alfa Slab One', cursive;
 }
 
 .clss {
