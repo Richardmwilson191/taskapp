@@ -2,22 +2,26 @@
     
 <center>
     <div class="box">
-        <h1>Sign In Form<br><br><br>
+        <h1>Sign In Form</h1>
             <form action="../modules/login.php" method="post">
                 <i class="far fa-user"></i>
-                <input class="textbox" type="text" name="username" value="" placeholder="Username" required><br><br>
+                <input class="textbox" type="text" name="username" value="" placeholder="Username" required><br><br><br><br>
                 <i class="fas fa-unlock"></i>
                 <input class="textbox" type="password" name="password" value="" placeholder="Password" required><br><br>
 
-                <input type="submit" name="login" value="Sign In">
-                <label>
-                    <h3><input type="checkbox" checked="checked" name="remember"> Remember me</h3>
-                </label>
+                <input type="submit" name="login" value="Sign In"><br><br>
 
-                <div style="background-color:#f1f1f1">
-                    <button type="button">Cancel</button>&emsp;&emsp;&emsp;
-                    <span>Forgot <a href="#">password?</a></span>
+               
+                    <input type="checkbox" checked="checked" name="remember">
+                    <label><h3> Remember me</h3></label><br><br>
+
+                <div>
+                 <button type="button">Cancel</button>&emsp;&emsp;&emsp;</button><br><br>
+              
                 </div>
+                <br><br>
+                <span>Forgot<a href="#"> password?</a></span>
+                
             </form>
 
     </div>
