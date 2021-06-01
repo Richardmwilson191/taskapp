@@ -13,10 +13,10 @@
 
                
                     <input type="checkbox" checked="checked" name="remember">
-                    <label><h3> Remember me</h3></label><br><br>
+                    <label for="remember"><h3> Remember me</h3></label><br><br>
 
                 <div>
-                 <button type="button" class="btnb">Cancel</button>&emsp;&emsp;&emsp;</button><br><br>
+                 <button type="button" class="btnb">Cancel</button>&emsp;&emsp;&emsp;<br><br>
               
                 </div>
                 <br><br>
