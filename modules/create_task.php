@@ -23,7 +23,7 @@ function createTask()
     } else {
         mysqli_stmt_bind_param($stmt, "ssssss", $task_id, $task_name, $project_id, $status, $end_date, $created_by);
         if (mysqli_stmt_execute($stmt)) {
-            Notice::addMessage('Project created Successfully', 'success');
+            Notice::addMessage('Created Successfully', 'success');
             header("location:../views/dashboard.php");
         } else {
             Notice::addMessage($mysqli->error, 'caution');

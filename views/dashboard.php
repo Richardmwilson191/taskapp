@@ -7,7 +7,7 @@
     <div>
         <a href="show_dashboard.php"><button class="btndash">Dashboard</button></a>&emsp; &emsp;
         <a href="show_project.php"><button class="btndash">Project</button></a> &emsp; &emsp;
-        <a href=""><button class="btndash">Task</button></a>
+        <a href="show_tasks.php"><button class="btndash">Task</button></a>
         &emsp; &emsp;
         <br>
         <a href="create_dashboard_form.php"><button class="btncreate">Create a dashboard</button></a>&emsp; &emsp;

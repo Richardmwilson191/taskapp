@@ -20,6 +20,9 @@ include('../modules/get_dashboards.php'); ?>
                 </td>
                 <td><?= $row['db_name'] ?></td>
                 <td><?= $row['created_by'] ?></td>
+                <td><a href="add_dashboard_user.php?id=<?= $row['db_id'] ?>">Add</a></td>
+                <td><a href="">Modify</a></td>
+                <td><a href="">Delete</a></td>
             </tr>
         <?php endwhile; ?>
     </table>
