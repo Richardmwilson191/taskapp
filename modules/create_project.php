@@ -30,7 +30,7 @@ function createProject()
             $sql2 = "INSERT INTO project_user(`p_id`, `username`) values(?, ?);";
             $stmt = mysqli_stmt_init($mysqli);
             if (!mysqli_stmt_prepare($stmt, $sql2)) {
-                echo "Failed to insert data";
+                Notice::addMessage($mysqli->error, 'caution');
             } else {
                 mysqli_stmt_bind_param($stmt, "ss", $p_id, $username);
                 if (mysqli_stmt_execute($stmt)) {

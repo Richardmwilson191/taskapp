@@ -1,6 +1,8 @@
 <?php
 
 require('../database/connect.php');
+require_once('notifications.php');
+
 
 function signUp()
 {
@@ -15,7 +17,7 @@ function signUp()
         $lname = $names[1];
 
         if ($password === $c_password) {
-            $mysqli = new DBCon('localhost', 'root', '', 'taskApp');
+            $mysqli = new DBCon('localhost', 'root', '', 'taskapp');
             $mysqli = $mysqli->connect();
 
             $password = password_hash($password, PASSWORD_DEFAULT);
@@ -23,14 +25,17 @@ function signUp()
             $sql = "INSERT INTO users(`first_name`, `last_name`, `dob`, `username`, `password`) values(?, ?, ?, ?, ?);";
             $stmt = mysqli_stmt_init($mysqli);
             if (!mysqli_stmt_prepare($stmt, $sql)) {
-                echo "Failed to insert data";
+                Notice::addMessage($mysqli->error, 'caution');
             } else {
                 mysqli_stmt_bind_param($stmt, "sssss", $fname, $lname, $dob, $username, $password);
-                mysqli_stmt_execute($stmt);
-                // $result = mysqli_stmt_get_result($stmt);
-                echo "Record successfully inserted";
-                mysqli_close($mysqli);
-                header('location: ../views/login_form.php?message=success');
+                if(!mysqli_stmt_execute($stmt)) {
+                    Notice::addMessage($mysqli->error, 'caution');
+                }else {
+                   // $result = mysqli_stmt_get_result($stmt);
+                   Notice::addMessage('Account user created Successfully', 'success');
+                   mysqli_close($mysqli);
+                   header('location: ../views/login_form.php?message=success');
+               }
             }
         } else {
             echo "Passwords do not match";
