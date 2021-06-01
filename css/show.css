@@ -33,6 +33,7 @@ th {
 td {
   border: 1px solid wheat;
   border-collapse: collapse;
+  padding: 5px 0;
 }
 
 .list-container a {
