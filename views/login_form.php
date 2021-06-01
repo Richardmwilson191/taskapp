@@ -16,7 +16,7 @@
                     <label><h3> Remember me</h3></label><br><br>
 
                 <div>
-                 <button type="button">Cancel</button>&emsp;&emsp;&emsp;</button><br><br>
+                 <button type="button" class="btnb">Cancel</button>&emsp;&emsp;&emsp;</button><br><br>
               
                 </div>
                 <br><br>

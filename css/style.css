@@ -162,7 +162,7 @@ input[type="submit"] {
 
 button {
   margin: 15px;
-  float: left;
+  
    width: 80px;
   height: 30px;
   border-radius: 10px;
@@ -172,6 +172,9 @@ button {
   position: relative; 
  
   
+}
+.btnb{
+  float: left;
 }
 
 /* Sign up form css */
