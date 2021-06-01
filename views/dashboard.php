@@ -12,7 +12,7 @@
         <br>
         <a href="create_dashboard_form.php"><button class="btncreate">Create a dashboard</button></a>&emsp; &emsp;
         <a href="project_form.php"><button class="btncreate">Create a project</button></a>&emsp; &emsp;
-        <a href=""><button class="btncreate">Create a task</button></a>&emsp; &emsp;
+        <a href="task_form.php"><button class="btncreate">Create a task</button></a>&emsp; &emsp;
     </div>
 </center>
 
