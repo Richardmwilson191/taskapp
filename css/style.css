@@ -98,7 +98,7 @@ nav:after {
   padding: 10px 20px;
   height: 600px;
   width: 300px;
-  background-color: white;
+  /* background-color: white; */
   background-repeat: no-repeat;
   background-size: auto;
   background-attachment: local;
@@ -112,11 +112,12 @@ form {
 
 h1 {
   margin-top: 40px;
+  margin-bottom: 60px;
   font-size: 30px;
   text-align: center;
   font-family: "Algerian";
   padding: 10px;
-  color: black;
+  color: #ffffff;
 }
 
 .textbox {
@@ -127,15 +128,19 @@ h1 {
   border-bottom-width: thin;
   background-color: inherit;
   outline: none;
+
+}
+label{
+  color: #ffffff;
 }
 
-i {
+ i  {
   padding: 5px;
   background: inherit;
-  color: black;
-  min-width: 50px;
-  text-align: center;
-}
+  color: #ffffff;
+  min-width: 20px; 
+   text-align: center; } 
+ 
 
 input[type="submit"] {
   margin: 45px 10px 0 5px;
@@ -160,13 +165,20 @@ input[type="submit"] {
 }
 
 button {
-  margin-top: 45px;
-  width: 50px;
-  height: 20px;
+  margin: 15px;
+  
+   width: 80px;
+  height: 30px;
   border-radius: 10px;
   font-size: 10px;
   color: white;
   background-color: blue;
+  position: relative; 
+ 
+  
+}
+.btnb{
+  float: left;
 }
 
 /* Sign up form css */
@@ -178,7 +190,7 @@ button {
 } */
 
 .Up {
-  background-color: white;
+  /* background-color: white; */
   margin-top: 75px;
   margin-left: 0;
   font-size: 20px;
@@ -190,6 +202,7 @@ button {
   height: 650px;
   width: 450px;
   text-align: left;
+  color: #ffffff;
 }
 
 input[type="text"],
@@ -198,8 +211,9 @@ input[type="date"] {
   height: 25px;
   font-size: 15px;
   /* width: fit-content; */
+  color: #ffffff;
 }
-span{
+.spn{
   color: aqua;
   font-family: 'Alfa Slab One', cursive;
 }

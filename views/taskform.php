@@ -20,7 +20,7 @@ background-size: 100% 100%;
         opacity: 3;
         box-shadow: 5px 10px 18px grey;
         border-radius: 25px;
-       /*  padding: 10px; */
+        padding: 10px; 
         height: 650px;
         width: 300px;
         background-repeat: no-repeat;
@@ -32,7 +32,7 @@ background-size: 100% 100%;
 
     form {
         font-size: 15px;
-        color: white;
+        color: white; 
     }
 
     h1 {

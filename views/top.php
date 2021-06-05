@@ -17,6 +17,7 @@ auth_check();
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
     <title>Task App</title>
 </head>
 
@@ -24,7 +25,7 @@ auth_check();
     <header>
         <div class="custom-padding">
             <nav>
-                <div class="logo">RJ<span>SS</span></div>
+                <div class="logo">RJ<span class="spn">SS</span></div>
                 <ul class="menu-area">
                     <li><a href="home.php">Home</a></li>
                     <?php if (!isset($_SESSION['username'])) { ?>

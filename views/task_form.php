@@ -1,7 +1,7 @@
 <?php include('top.php');
 include('../modules/get_projects.php');
 ?>
-
+<br><br>
 <center>
     <form class="create-container" action="../modules/create_task.php" method="post">
         <center>

@@ -1,7 +1,7 @@
 <?php include('top.php');
 include('../modules/get_dashboards.php');
 ?>
-
+<br><br>
 <center>
     <form class="create-container" action="../modules/create_project.php" method="post">
         <center>
