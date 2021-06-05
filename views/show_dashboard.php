@@ -9,6 +9,7 @@ include('../modules/get_dashboards.php'); ?>
             <th>Dashboard ID</th>
             <th>Dashboard Name</th>
             <th>Created By</th>
+            <th colspan="3">Options</th>
         </tr>
         <?php $result = getDashboard();
         while ($row = mysqli_fetch_assoc($result)) : ?>
@@ -21,8 +22,8 @@ include('../modules/get_dashboards.php'); ?>
                 <td><?= $row['db_name'] ?></td>
                 <td><?= $row['created_by'] ?></td>
                 <td><a href="add_dashboard_user.php?id=<?= $row['db_id'] ?>">Add</a></td>
-                <td><a href="">Modify</a></td>
-                <td><a href="">Delete</a></td>
+                <td><a href="modify_dashboard.php?id=<?= $row['db_id'] ?>">Modify</a></td>
+                <td><a href="../module/delete_dashboard.php?id=<?= $row['db_id'] ?>">Delete</a></td>
             </tr>
         <?php endwhile; ?>
     </table>

@@ -51,27 +51,6 @@ function createDashboard()
     }
 }
 
-function addDashUser($db_id)
-{
-    $mysqli = new DBCon('localhost', 'root', '', 'taskApp');
-    $mysqli = $mysqli->connect();
-    $username = $_POST['username'];
-    $db_id = $_GET['id'];
-
-    $sql = "INSERT INTO dashboard_user(`db_id`, `username`) VALUES(?, ?);";
-    $stmt = mysqli_stmt_init($mysqli);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        Notice::addMessage($mysqli->error, 'caution');
-    } else {
-        mysqli_stmt_bind_param($stmt, "ss", $db_id, $username);
-        mysqli_stmt_execute($stmt);
-        Notice::addMessage('Project created Successfully', 'success');
-        mysqli_close($mysqli);
-        header("location:../views/show_dashboard.php");
-        die;
-    }
-}
-
 if (isset($_POST['submit'])) {
     try {
         createDashboard();

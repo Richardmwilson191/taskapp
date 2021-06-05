@@ -15,7 +15,7 @@ auth_check();
 <html lang="en">
 
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>Task App</title>
 </head>

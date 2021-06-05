@@ -1,4 +1,6 @@
 <?php
+require_once('../modules/notifications.php');
+
 class DBCon
 {
     private $host;
@@ -22,7 +24,7 @@ class DBCon
         if (!$this->mysqli) {
             die('Could not connect: ' . $this->mysqli->connect_error());
         } else {
-            echo '<script>alert("Connected successfully")</script>';
+            // Notice::addMessage('Connected Successfully', 'success');
         }
 
         return $this->mysqli;

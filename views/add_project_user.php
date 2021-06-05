@@ -1,5 +1,5 @@
 <?php include('top.php');
-require('../modules/dashboard_functions.php');
+require('../modules/project_functions.php');
 require('../modules/get_users.php');
 // require_once('notifications.php');
 ?>
@@ -7,7 +7,7 @@ require('../modules/get_users.php');
 <center>
     <form class="create-container" action="" method="post">
         <center>
-            <h1>Add Dashboard User</h1>
+            <h1>Add Project User</h1>
             <label for="username">Username</label>
             <input class="textbox" type="text" name="username" id="username" placeholder="Enter username" required />
             <br /><br /><br />
@@ -26,10 +26,10 @@ if (isset($_POST['add'])) {
     $username = $_POST['username'];
     if (in_array($username, $users)) {
         $id = $_GET['id'];
-        addDashUser();
+        addProjectUser($id);
     } else {
         Notice::addMessage("The user $username does not exist", 'caution');
-        header('location:add_dashboard_user.php');
+        header('location:add_project_user.php');
     }
 }
 ?>
