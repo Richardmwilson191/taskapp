@@ -15,11 +15,14 @@ function addDashUser()
         Notice::addMessage($mysqli->error, 'caution');
     } else {
         mysqli_stmt_bind_param($stmt, "ss", $db_id, $username);
-        mysqli_stmt_execute($stmt);
-        Notice::addMessage('Project created Successfully', 'success');
-        mysqli_close($mysqli);
-        header("location:../views/show_dashboard.php");
-        die;
+        if (!mysqli_stmt_execute($stmt)) {
+            Notice::addMessage($mysqli->error, 'caution');
+        } else {
+            Notice::addMessage('User added Successfully', 'success');
+            mysqli_close($mysqli);
+            header("location:../views/show_dashboard.php");
+            die;
+        }
     }
 }
 
