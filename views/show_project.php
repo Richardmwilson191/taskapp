@@ -32,11 +32,14 @@ include('../modules/get_projects.php'); ?>
                 <td><?= $row['p_start_dt'] ?></td>
                 <td><?= $row['p_end_dt'] ?></td>
                 <td><?= $row['created_by'] ?></td>
-                <td><a href="add_project_user.php?id=<?= $row['p_id'] ?>">Add</a></td>
-                <td><a href="modify_project.php?id=<?= $row['p_id'] ?>">Modify</a></td>
-                <td><a href="../module/delete_project.php?id=<?= $row['p_id'] ?>">Delete</a></td>
+                <?php if ($_SESSION['username'] == $row['created_by']) : ?>
+                    <td><a href="add_project_user.php?id=<?= $row['p_id'] ?>">Add</a></td>
+                    <td><a href="modify_project.php?id=<?= $row['p_id'] ?>">Modify</a></td>
+                    <td><a href="../modules/delete_project.php?id=<?= $row['p_id'] ?>">Delete</a></td>
+                <?php endif; ?>
             </tr>
         <?php endwhile; ?>
+        <a href="../modules/restore_projects.php"><button>Restore All</button></a>
 </div>
 
 <?php include('base.php') ?>

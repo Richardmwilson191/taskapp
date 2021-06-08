@@ -21,12 +21,15 @@ include('../modules/get_dashboards.php'); ?>
                 </td>
                 <td><?= $row['db_name'] ?></td>
                 <td><?= $row['created_by'] ?></td>
-                <td><a href="add_dashboard_user.php?id=<?= $row['db_id'] ?>">Add</a></td>
-                <td><a href="modify_dashboard.php?id=<?= $row['db_id'] ?>">Modify</a></td>
-                <td><a href="../module/delete_dashboard.php?id=<?= $row['db_id'] ?>">Delete</a></td>
+                <?php if ($_SESSION['username'] == $row['created_by']) : ?>
+                    <td><a href="add_dashboard_user.php?id=<?= $row['db_id'] ?>">Add</a></td>
+                    <td><a href="modify_dashboard.php?id=<?= $row['db_id'] ?>">Modify</a></td>
+                    <td><a href="../modules/delete_dashboard.php?id=<?= $row['db_id'] ?>">Delete</a></td>
+                <?php endif; ?>
             </tr>
         <?php endwhile; ?>
     </table>
+    <a href="../modules/restore.php"><button>Restore All</button></a>
 </div>
 
 <?php include('base.php') ?>

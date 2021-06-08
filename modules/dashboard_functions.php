@@ -43,3 +43,24 @@ function modifyDashboard()
         die;
     }
 }
+
+function delete()
+{
+    $mysqli = new DBCon('localhost', 'root', '', 'taskApp');
+    $mysqli = $mysqli->connect();
+    $db_id = $_GET['id'];
+    $username = $_SESSION['username'];
+
+    $sql = "UPDATE `dashboard_user` SET `active_flg`= 'n' WHERE db_id = ? and username = ?;";
+    $stmt = mysqli_stmt_init($mysqli);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        Notice::addMessage($mysqli->error, 'caution');
+    } else {
+        mysqli_stmt_bind_param($stmt, "ss", $db_id, $username);
+        mysqli_stmt_execute($stmt);
+        Notice::addMessage('Dashboard deleted Successfully', 'success');
+        mysqli_close($mysqli);
+        header("location:../views/show_dashboard.php");
+        die;
+    }
+}
